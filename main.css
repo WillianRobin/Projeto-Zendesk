@@ -1,0 +1,357 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+.header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: flex;
+    padding: 1rem 3%;
+    background-color: #aa7448;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: 100000;
+}
+
+.nav-bar {
+    display: flex;
+    /* justify-content: center; */
+}
+
+.logo {
+    display: flex;
+    /* align-items: center; */
+}
+
+.logo-img {
+    width: 120px;
+}
+
+.nav-list {
+    display: flex;
+    margin: auto;
+}
+
+.nav-list ul {
+    display: flex;
+    list-style: none;
+    padding: 1px;
+    margin-left: 35rem;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: normal;
+    height: 10px;
+}
+
+.nav-item {
+    margin: 0 10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1.15rem;
+    font-weight: 400;
+    position: relative;
+}
+
+.nav-link::after {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #000;
+    /* #f9e8cc */
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: .5s;
+}
+
+.nav-link:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+/* carrinho de compra */
+.btn-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: -10px;
+    margin-left: 20rem;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    position: relative;
+}
+
+.btn-cart::after {
+    content: attr(data-quantity);
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    font-size: 15px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s linear;
+    top: 115%;
+}
+
+.icon-cart {
+    width: 24.38px;
+    height: 30.52px;
+    transition: .2s linear;
+}
+
+.icon-cart path {
+    fill: #212121;
+    transition: .2s linear;
+}
+
+.btn-cart:hover>.icon-cart {
+    transform: scale(1.2);
+}
+
+.btn-cart:hover>.icon-cart path {
+    fill: #f3f3f4;
+}
+
+.btn-cart:hover::after {
+    visibility: visible;
+    opacity: 1;
+    top: 75%;
+}
+
+.quantity {
+    display: none;
+}
+
+/* barra de pesquisa */
+.group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    max-width: 190px;
+}
+
+.input {
+    width: 100%;
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: 0.3s ease;
+}
+
+.input::placeholder {
+    color: #9e9ea7;
+}
+
+.input:focus,
+input:hover {
+    outline: none;
+    border-color: rgba(234, 226, 183, 0.4);
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgb(234 226 183 / 10%);
+}
+
+.icon {
+    position: absolute;
+    left: 1rem;
+    fill: #9e9ea7;
+    width: 1rem;
+    height: 1rem;
+}
+
+.bloco-imagens-texto {
+    background-color: #f9e8cc3f;
+}
+
+.bloco-imagens-texto::after {
+    /* width: 100%; */
+    display: inline-block;
+    content: "";
+    height: 70px;
+}
+
+.meio {
+    padding: 7rem 0 0 8.5rem;
+    line-height: 4rem;
+}
+
+.meio h1 {
+    font-size: 4rem;
+}
+
+.meio p {
+    font-size: 1rem;
+}
+
+.meio button {
+    background-color: #aa7448;
+    padding: 5px 40px;
+    border: none;
+    border-radius: 35px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.meio button:hover {
+    background-color: #111;
+    transform: scale(1.02);
+}
+
+.img-topo-site {
+    float: right;
+    /* margin-left: 5px; */
+}
+
+
+/*Willian Parte*/
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+
+body::-webkit-scrollbar-track {
+    background: #aa7448;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #f9e8cc;
+    border-radius: 10vh;
+}
+
+
+#logo {
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px #f9e8cc;
+}
+
+.sobre {
+    position: relative;
+    top: 17vh;
+    margin-left: 10vw;
+    text-align: start;
+    text-decoration: none;
+    color: #aa7448;
+}
+
+main {
+    width: 100%;
+    height: 50vh;
+    background-color: #f9e8cc;
+    color: #aa7448;
+    position: relative;
+    top: 10vh;
+    display: flex;
+    justify-content: space-around;
+    padding: 5vh 5vw;
+    margin-top: 10vh;
+}
+
+.empresa {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.tropicalia {
+    width: 20vw;
+}
+
+.slogan {
+    color: #aa7448;
+}
+
+
+.circulos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.circulo-1 {
+    width: 90px;
+    height: 90px;
+    background-color: #aa7448;
+    border: 2px black solid;
+    border-radius: 100%;
+}
+.circulo-2 {
+    width: 90px;
+    height: 90px;
+    background-color: #f9e8cc;
+    border: 2px black solid;
+    border-radius: 100%;
+}
+.circulo-3 {
+    width: 90px;
+    height: 90px;
+    background-color: #86bbd8;
+    border: 2px black solid;
+    border-radius: 100%;
+}
+
+.local{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.local-imagem{
+    box-shadow: 1vw 2vh #86bbd8;
+    align-self: center;
+    height: 30vh;
+}
+
+.imagem-local{
+    display: flex;
+    align-items: center;
+}
+footer {
+    position: relative;
+    top: 30vh;
+    background-color: #aa7448;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.icones{
+    font-size: 5vh;
+    box-shadow: 0px 0px 5vh;
+    transition: 0.3s ease-in-out;
+}
+.icones:hover{
+    transform: scale(1.1);
+}
