@@ -230,203 +230,131 @@ input:hover {
     /* margin-left: 5px; */
 }
 
+/* Parte Willian */
 
-/*Willian Parte*/
-body::-webkit-scrollbar {
-    width: 12px;
+body {
+    width: 100%;
+    height: 100%;
 }
 
-
-body::-webkit-scrollbar-track {
-    background: #aa7448;
+::-webkit-scrollbar {
+    background-color: #aa7448;
+    border-radius: 10px;
 }
 
-body::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background-color: #f9e8cc;
-    border-radius: 10vh;
+    border-radius: 10px;
+    border: none;
 }
 
+::-webkit-scrollbar-track{
+    background-color: #aa7448;
+}
+::-webkit-scrollbar-corner{
+    background-color: #aa7448;
+}
 
 #logo {
     border-radius: 50%;
-    transition: 0.2s ease;
+    transition: 0.3 ease;
 }
 
 #logo:hover {
-    box-shadow: 0px 0px 10px #f9e8cc;
+    box-shadow: 0px 0px 2vh #f9e8cc;
 }
 
-.sobre {
+
+.caixas {
+    width: 100vw;
+    height: 100vh;
     position: relative;
-    top: 17vh;
-    margin-left: 10vw;
-    text-align: start;
-    text-decoration: none;
-    color: #aa7448;
+    top: 30vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .caixa-1 {
-    width: 100%;
-    height: 50vh;
-    background-color: #f9e8cc;
-    color: #aa7448;
-    position: relative;
-    top: 10vh;
+    width: 100vw;
+    height: 20vh;
+    /* position: relative;
+    top: 20vw; */
     display: flex;
-    justify-content: space-evenly;
-    margin-top: 10vh;
-    padding-top: 3vh;
-    padding-bottom: 3vh;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.informacao{
+.produtos {
+    width: 20vw;
+    height: 50vh;
+    border: 2px solid #f9e8cc;
+    background-color: #aa744834;
+    border-radius: 0vh 2vw;
+    padding: 2vh 2vw;
     text-align: justify;
-}
-.informacao-2{
-    text-align: center
-}
-
-.imagem-logo{
-    position: relative;
-    top: -5vh;
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+
 }
+
+.produtos:hover {
+    box-shadow: 0px 0px 10px #f9e8cc;
+}
+
+.imagem-produto {
+    width: 200px;
+    height: 200px;
+    border-radius: 1vh;
+    align-self: center;
+}
+
+.comprar {
+    text-decoration: none;
+    /* background-color: #86bbd8; */
+    color: black;
+    border-radius: 1vh;
+    padding: 0.5vh;
+    transition: 0.5s ease-out;
+}
+
+.comprar:hover {
+    background-color: #aa7448;
+}
+
+.imagem-produto {
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.imagem-produto:hover {
+    border: 1px;
+    border-color: #86bbd8;
+    box-shadow: 0px 0px 10px #86bbd8;
+}
+
 
 .caixa-2 {
-    width: 100%;
-    height: 60vh;
-    background-color: #f9e8cc;
-    color: #aa7448;
+    width: 100vw;
+    height: 20vh;
     position: relative;
-    top: 10vh;
+    top: 20vh;
     display: flex;
-    justify-content: space-evenly;
-    margin-top: 10vh;
-    padding-top: 3vh;
-    padding-bottom: 3vh;
-}
-
-.caixa-3 {
-    width: 100%;
-    height: 50vh;
-    background-color: #f9e8cc;
-    color: #aa7448;
-    position: relative;
-    top: 10vh;
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 10vh;
-    padding-top: 3vh;
-    padding-bottom: 3vh;
-}
-
-.empresa {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-}
-
-.tropicalia {
-    width: 25vw;
-}
-
-.slogan {
-    color: #aa7448;
-}
-
-
-.circulos {
-    display: flex;
-    flex-direction: column;
     justify-content: space-around;
-}
-
-.circulo-1 {
-    width: 90px;
-    height: 90px;
-    background-color: #aa7448;
-    border: 2px black solid;
-    border-radius: 100%;
-}
-
-.circulo-2 {
-    width: 90px;
-    height: 90px;
-    background-color: #f9e8cc;
-    border: 2px black solid;
-    border-radius: 100%;
-}
-
-.circulo-3 {
-    width: 90px;
-    height: 90px;
-    background-color: #86bbd8;
-    border: 2px black solid;
-    border-radius: 100%;
-}
-
-.local {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.local-imagem {
-    box-shadow: 1vw 2vh #86bbd8;
-    align-self: center;
-    height: 30vh;
-}
-
-.imagem-local {
-    display: flex;
     align-items: center;
 }
+
 
 footer {
-    position: relative;
-    top: 30vh;
     background-color: #aa7448;
     width: 100%;
     height: 20vh;
     display: flex;
-    align-items: center;
+    position: relative;
+    top: 50vw;
     justify-content: space-around;
-}
-
-.icones {
-    font-size: 5vh;
-    transition: 0.3s ease-in-out;
-}
-
-.icones:hover {
-    transform: scale(1.05);
-    -webkit-filter: drop-shadow(0px 0px 20px #f9e8cc);
-    filter: drop-shadow(0px 0px 20px #f9e8cc);
-}
-
-.text{
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 700;
-}
-
-p{
-    text-align: justify;
-    align-self: center;
-}
-.container-sobre, #container-sobre{
-    width: 30vw;
-    display: flex;
     align-items: center;
-    flex-direction: column;
-    justify-content: space-around
-}
 
-.imagem{
-    height: 30vh;
-    box-shadow: 1vh 1vw ;
 }
